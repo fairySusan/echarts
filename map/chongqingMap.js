@@ -39,130 +39,137 @@ const listData = [
     {name:'影响用户数',value:50},
     {name:'影响用户率',value:0.3},
 ]
-let geoCoordMap = [
+geoCoordMap = [
     {
-     name: '重庆',
-     coord: [106.57,29.55]
-    }, 
-    {
-        name: '万盛',
-        coord: [106.92,28.97]
-    }, 
-    {
-        name: '双桥',
-        coord:  [105.78,29.48]
-    }, 
+        name: '重庆',
+        coord: [106.57, 29.55]
+    },
+    // {
+    //     name: '双桥',
+    //     coord:  [105.78, 29.48]
+    // },
     {
         name: '万州',
-        coord:  [108.4,30.82]
-    }, 
+        coord:  [108.3911, 30.6958]
+    },
     {
         name: '涪陵',
-        coord: [107.4,29.72]
-    }, 
+        coord: [107.3364, 29.6796]
+    },
     {
         name: '黔江',
-        coord: [108.77,29.53]
-    }, 
+        coord: [108.7207, 29.4708]
+    },
     {
         name: '长寿',
-        coord: [107.08,29.87]
-    }, 
+        coord: [107.1606, 29.9762]
+    },
     {
         name: '綦江',
-        coord: [106.65,29.03]
-    }, 
+        coord: [106.6553, 28.8171]
+    },
     {
         name: '大足',
-        coord: [105.72,29.7]
-    }, 
+        coord: [105.7544, 29.6136]
+    },
     {
         name: '璧山',
-        coord: [106.22,29.6]
-    }, 
+        coord: [106.2048, 29.5807]
+    },
     {
         name: '永川',
-        coord:[105.939253,29.363557]
-    }, 
+        coord: [105.8643, 29.2566]
+    },
     {
         name: '江津',
-        coord:[106.267898,29.286308]
-    }, 
+        coord: [106.2158, 28.9874]
+    },
     {
         name: '潼南',
-        coord: [105.83,30.18]
-    }, 
-    {
-        name: '荣昌',
-        coord: [105.58,29.4]
-    }, 
+        coord: [105.7764, 30.1135]
+    },
     {
         name: '梁平',
-        coord: [107.8,30.68]
-    }, 
+        coord: [107.7429, 30.6519]
+    },
     {
         name: '城口',
-        coord: [108.67,31.95]
-    }, 
+        coord: [108.7756, 31.9098]
+    },
     {
         name: '丰都',
-        coord: [107.73,29.87]
+        coord: [107.8418, 29.9048]
     },
     {
         name: '垫江',
-        coord: [107.35,30.33]
-    }, 
+        coord: [107.4573, 30.2454]
+    },
     {
         name: '武隆',
-        coord: [107.75,29.33],
-    }, 
+        coord: [107.75, 29.33],
+    },
     {
         name: '忠县',
-        coord: [108.02,30.3]
-    }, 
+        coord: [107.8967, 30.3223]
+    },
     {
         name: '开州',
-        coord: [108.42,31.18]
-    }, 
+        coord: [108.4131, 31.2561]
+    },
     {
         name: '云阳',
-        coord:  [108.67,30.95]
-    }, 
+        coord:  [108.8306, 31.0089]
+    },
     {
         name: '奉节',
-        coord: [109.47,31.02]
-    }, 
+        coord: [109.3909, 30.9265]
+    },
 
     {
         name: '巫山',
-        coord:  [109.88,31.08]
-    }, 
+        coord:  [109.88, 31.08]
+    },
     {
         name: '巫溪',
-        coord: [109.63,31.4]
-    }, 
+        coord: [109.3359, 31.4813]
+    },
     {
         name: '石柱',
-        coord: [108.12,30.0]
-    }, 
+        coord: [108.2813, 30.1025]
+    },
     {
         name: '秀山',
-        coord: [108.98,28.45]
-    }, 
+        coord: [109.0173, 28.5205]
+    },
     {
         name: '酉阳',
-        coord: [108.77,28.85]
-    }, 
+        coord: [108.8196, 28.8666]
+    },
     {
         name: '彭水',
-        coord: [108.17,29.3]
-    }, 
+        coord: [108.2043, 29.3994]
+    },
     {
         name: '合川',
-        coord: [106.272192,29.979182]
-    }, 
-     
-]
+        coord: [106.3257, 30.108]
+    },
+    {
+      name: '南川',
+      coord: [107.1716, 29.1302]
+    },
+    {
+      name: '铜梁',
+      coord: [106.0291, 29.8059]
+    },
+    {
+      name: '荣昌',
+      coord: [105.5127, 29.4708]
+    },
+    {
+      name: '万盛',
+      coord: [106.908, 28.9325]
+    },
+  ];
 $.get('http://127.0.0.1:8081/chongqing',function(res){
     var json = res;
     var mapElement = document.getElementById('cq-map-chart');
@@ -186,7 +193,14 @@ $.get('http://127.0.0.1:8081/chongqing',function(res){
                     })
                     return res;
                 }
-            }
+            },
+            position: (pos, params, dom, rect, size) => {
+                const obj = {
+                  left: pos[0] - size.contentSize[0] / 2 + 10,
+                  top: pos[1] - size.contentSize[1],
+                };
+                return obj;
+            },
         },
         visualMap: {
             name:'图例',
@@ -247,13 +261,13 @@ $.get('http://127.0.0.1:8081/chongqing',function(res){
                         borderWidth: 1.5,
                         shadowColor: 'rgba(0, 0, 0, 0.5)',
                         shadowBlur: 5,
-                        // shadowOffsetX: 5,
                         shadowOffsetY: 5
                     }
                 },
                 markPoint: {
                     symbol: 'circle',
                     symbolSize: 5,
+                    symbolOffset: [0, -10],
                     itemStyle: {
                         color: 'rgb(2,35,81)',
                         borderColor: "#ffffff",
