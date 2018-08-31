@@ -11,7 +11,7 @@ var option = {
         textStyle:{
             color: '#ffffff'
         },
-        data:['传输原因','停电原因','设备原因','其他原因']
+        data:['传输原因', '停电原因','设备原因','其他原因']
     },
     series:[{
         type: 'pie',
