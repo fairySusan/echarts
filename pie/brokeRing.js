@@ -22,6 +22,7 @@ var option = {
         labelLine:{
             show: false
         },
+        // 斷開断开环状图的关键：borderWidth: 20, borderColor: 'rgb(2,35,81)'}
         data:[
             {value:25, name:'传输原因',itemStyle:{color:'#00baff',borderWidth: 20, borderColor: 'rgb(2,35,81)'}},
             {value:25, name:'停电原因',itemStyle:{color:'#b4872f',borderWidth: 20, borderColor: 'rgb(2,35,81)'}},
