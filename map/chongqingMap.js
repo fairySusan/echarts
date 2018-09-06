@@ -180,7 +180,7 @@ $.get('http://127.0.0.1:8081/chongqing',function(res){
             trigger:'item',
             backgroundColor: 'rgba(6,34,86,0.8)',
             opacity: 0.8,
-            extraCssText: "width:373px;height:233px;background: url(./gis-tip.png) no-repeat;",
+            extraCssText: "width:373px;height:233px;background: url(../gis-tip.png) no-repeat;",
             formatter:function(params) {
                 console.log("params",params);
                 let res = '';
