@@ -34,6 +34,14 @@ app.get('/chongqing', function (req, res) {
         res.send(data);
     })
  })
+ app.get('/hebei', function (req, res) {
+    fs.readFile('./mapJOSN/hebei.json',function(err,data){
+        if(err){
+            return console.error(err);
+        }
+        res.send(data);
+    })
+ })
 var server = app.listen(8081, function () {
  
     var host = server.address().address
