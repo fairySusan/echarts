@@ -1,15 +1,15 @@
 var data = [
-    {name: '张家口市', value: 136},
-    {name: '承德市', value: 106},
-    {name: '秦皇岛市', value: 96},
-    {name: '唐山市', value: 136},
-    {name: '保定市', value: 116},
-    {name: '廊坊市', value: 100},
-    {name: '石家庄市', value: 136},
-    {name: '沧州市', value: 90},
-    {name: '衡水市', value: 110},
-    {name: '邢台市', value: 86},
-    {name: '邯郸市', value: 136}
+    {name: '张家口市', value: 136,  height: 1},
+    {name: '承德市', value: 106,  height: 1},
+    {name: '秦皇岛市', value: 96,  height: 1},
+    {name: '唐山市', value: 136,  height: 1},
+    {name: '保定市', value: 116,  height: 1},
+    {name: '廊坊市', value: 100,  height: 1},
+    {name: '石家庄市', value: 136,  height: 8},
+    {name: '沧州市', value: 90,  height: 1},
+    {name: '衡水市', value: 110,  height: 1},
+    {name: '邢台市', value: 86,  height: 1},
+    {name: '邯郸市', value: 136, height: 1}
 ]
 $.get('http://127.0.0.1:8081/hebei',function(res){
     var json = res;
@@ -29,19 +29,21 @@ $.get('http://127.0.0.1:8081/hebei',function(res){
         },
         geo3D: {
             map: 'hebei',
+            show: false,
             roam: true,
-        //     environment: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-        //         offset: 0, color: '#00aaff' // 天空颜色
-        //       }, {
-        //         offset: 0.7, color: '#998866' // 地面颜色
-        //       }, {
-        //         offset: 1, color: '#998866' // 地面颜色
-        //       }], false)
+            boxHeight: 10,
+            environment: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                offset: 0, color: '#00aaff' // 天空颜色
+              }, {
+                offset: 0.7, color: '#998866' // 地面颜色
+              }, {
+                offset: 1, color: '#998866' // 地面颜色
+              }], false)
          },
         series: [{
             type: 'map3D',
             map: 'hebei',
-            regionHeight: 4,
+            // regionHeight: 1,
             roam: true,
             label: {
                 show: true,
@@ -75,6 +77,7 @@ $.get('http://127.0.0.1:8081/hebei',function(res){
                 }
             },
             data: data,
+            boxHeight: 10,
         }]
     };
     mychart.setOption(option);

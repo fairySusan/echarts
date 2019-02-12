@@ -1,36 +1,36 @@
 const MockData = [
-    {name: '丰都', value: 0.9,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '重庆', value: 0.05,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '合川', value: 0.13,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '彭水', value: 0.12,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '秀山', value: 0.09,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '忠县', value: 0.03,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '开州', value: 0.05,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '垫江', value: 0.1,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '城口', value: 0.7,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '大足', value: 0.4,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '綦江', value: 0.17,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '万州', value: 0.13,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '长寿', value: 0,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '黔江', value: 0.04,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '江津', value: 0.05,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '璧山', value: 0.03,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '双桥', value: 0.16,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '万盛', value: 0.18,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '涪陵', value: 0.19,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '永川', value: 0.3,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '潼南', value: 0.04,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '荣昌', value: 0.04,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '梁平', value: 0.04,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '武隆', value: 0.6,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '云阳', value: 0.3,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '奉节', value: 0.15,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '巫山', value: 0.01,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '巫溪', value: 0.1,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '石柱', value: 0.13,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '酉阳', value: 0.16,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '南川', value: 0.13,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]},
-    {name: '铜梁', value: 0.1,list:  [     {name:'OLT退服衍生告警数',value:5},     {name:'OLT退服数',value:80},     {name:'OLT退服率',value:0.05},     {name:'影响用户数',value:50},     {name:'影响用户率',value:0.3}, ]}
+    {name: '丰都', value: 0.9},
+    {name: '重庆', value: 0.05},
+    {name: '合川', value: 0.13},
+    {name: '彭水', value: 0.12},
+    {name: '秀山', value: 0.09},
+    {name: '忠县', value: 0.03},
+    {name: '开州', value: 0.05},
+    {name: '垫江', value: 0.1},
+    {name: '城口', value: 0.7},
+    {name: '大足', value: 0.4},
+    {name: '綦江', value: 0.17},
+    {name: '万州', value: 0.13},
+    {name: '长寿', value: 0},
+    {name: '黔江', value: 0.04},
+    {name: '江津', value: 0.05},
+    {name: '璧山', value: 0.03},
+    {name: '双桥', value: 0.16},
+    {name: '万盛', value: 0.18},
+    {name: '涪陵', value: 0.19},
+    {name: '永川', value: 0.3},
+    {name: '潼南', value: 0.04},
+    {name: '荣昌', value: 0.04},
+    {name: '梁平', value: 0.04},
+    {name: '武隆', value: 0.6},
+    {name: '云阳', value: 0.3},
+    {name: '奉节', value: 0.15},
+    {name: '巫山', value: 0.01},
+    {name: '巫溪', value: 0.1},
+    {name: '石柱', value: 0.13},
+    {name: '酉阳', value: 0.16},
+    {name: '南川', value: 0.13},
+    {name: '铜梁', value: 0.1}
   ];
 const listData = [
     {name:'OLT退服衍生告警数',value:5},
@@ -39,7 +39,7 @@ const listData = [
     {name:'影响用户数',value:50},
     {name:'影响用户率',value:0.3},
 ]
-geoCoordMap = [
+geoCoordChongqingMap = [
     {
         name: '重庆',
         coord: [106.57, 29.55]
@@ -170,6 +170,18 @@ geoCoordMap = [
       coord: [106.908, 28.9325]
     },
   ];
+  function convertData(data) {
+    data.forEach(item => {
+        item.list = [
+            {name:'OLT退服衍生告警数',value:5},
+            {name:'OLT退服数',value:80},
+            {name:'OLT退服率',value:0.05},
+            {name:'影响用户数',value:50},
+            {name:'影响用户率',value:0.3}
+        ];
+    });
+    return data;
+  }
 $.get('http://127.0.0.1:8081/chongqing',function(res){
     var json = res;
     var mapElement = document.getElementById('cq-map-chart');
@@ -180,9 +192,8 @@ $.get('http://127.0.0.1:8081/chongqing',function(res){
             trigger:'item',
             backgroundColor: 'rgba(6,34,86,0.8)',
             opacity: 0.8,
-            extraCssText: "width:373px;height:233px;background: url(../gis-tip.png) no-repeat;",
+            extraCssText: "width:373px;height:233px;background: url(./gis-tip.png) no-repeat;",
             formatter:function(params) {
-                console.log("params",params);
                 let res = '';
                 if(params.data){
                     res = `<div style="width: 150px; top: 5px; left: 30px;height: 20px;font-family: MicrosoftYaHei-Bold;font-size: 20px;font-weight: normal;font-stretch: normal;letter-spacing: 2px;color: #ec792f;">${params.data.name}</div>`;
@@ -229,15 +240,15 @@ $.get('http://127.0.0.1:8081/chongqing',function(res){
             borderColor: '#ffffff',
             color: '#ffffff',
         },
-        // geo:{
-        //     show: true,
-        //     map: 'chongqing',
-        // },
+        geo:{
+            show: true,
+            map: 'CQ',
+        },
         series:[
             {
-                name: '本期',
+                name: '重庆',
                 type: 'map',
-                mapType: 'CQ', // 自定义扩展图表类型
+                map: 'CQ', // 自定义扩展图表类型
                 itemStyle: {
                     normal: {
                       borderColor: '#022351',
@@ -265,6 +276,7 @@ $.get('http://127.0.0.1:8081/chongqing',function(res){
                     }
                 },
                 markPoint: {
+                    silent: true,
                     symbol: 'circle',
                     symbolSize: 5,
                     symbolOffset: [0, -10],
@@ -273,11 +285,11 @@ $.get('http://127.0.0.1:8081/chongqing',function(res){
                         borderColor: "#ffffff",
                         borderWidth: 2
                     },
-                    data: geoCoordMap
+                    data: geoCoordChongqingMap
                 },
                 zoom: 1.2,
                 selectedMode: 'single',
-                data: MockData
+                data: convertData(MockData)
             }
         ]
     };

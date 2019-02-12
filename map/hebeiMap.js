@@ -1,6 +1,20 @@
 /*用geo模拟地图轮廓阴影 */
-var data = [
-    {name: '张家口市', value: 136},
+var data1 = [
+    {name: '张家口市', value: 136,  itemStyle: {
+        color: {
+            type: 'linear',
+            x: 0,
+            y:0,
+            x1: 1,
+            y1: 0,
+            colorStops: [{
+                offset: 0, color: 'red' // 0% 处的颜色
+            }, {
+                offset: 1, color: 'blue' // 100% 处的颜色
+            }],
+            globalCoord: false // 缺省为 false
+        },
+    }},
     {name: '承德市', value: 106},
     {name: '秦皇岛市', value: 96},
     {name: '唐山市', value: 136},
@@ -16,12 +30,12 @@ var regions = [
     {
         name: '张家口市',
         itemStyle: {
-            areaColor: {
-                type: 'linear',
-               x: 0,
+            color: {
+              type: 'linear',
+                x: 0,
                 y:0,
-               x1: 0,
-               y1: 1,
+                x1: 0,
+                y1: 1,
                 colorStops: [{
                     offset: 0, color: '#2467bc' // 0% 处的颜色
                 }, {
@@ -34,7 +48,7 @@ var regions = [
     {
         name: '保定市',
         itemStyle: {
-            areaColor: {
+            color: {
                 type: 'linear',
                x: 0,
                 y:0,
@@ -52,7 +66,7 @@ var regions = [
     {
         name: '石家庄市',
         itemStyle: {
-            areaColor: {
+            color: {
                 type: 'linear',
                x: 0,
                 y:0,
@@ -70,7 +84,7 @@ var regions = [
     {
         name: '邢台市',
         itemStyle: {
-            areaColor: {
+            color: {
                 type: 'linear',
                x: 0,
                 y:0,
@@ -88,7 +102,7 @@ var regions = [
     {
         name: '邯郸市',
         itemStyle: {
-            areaColor: {
+            color: {
                 type: 'linear',
                x: 0,
                 y:0,
@@ -106,7 +120,7 @@ var regions = [
     {
         name: '承德市',
         itemStyle: {
-            areaColor: {
+            color: {
                 type: 'linear',
                x: 0,
                 y:0,
@@ -124,7 +138,7 @@ var regions = [
     {
         name: '唐山市',
         itemStyle: {
-            areaColor: {
+            color: {
                 type: 'linear',
                x: 0,
                 y:0,
@@ -142,7 +156,7 @@ var regions = [
    {
         name: '衡水市',
         itemStyle: {
-            areaColor: {
+            color: {
                 type: 'linear',
                x: 0,
                 y:0,
@@ -159,7 +173,7 @@ var regions = [
     },{
         name: '沧州市',
         itemStyle: {
-            areaColor: {
+            color: {
                 type: 'linear',
                x: 0,
                 y:0,
@@ -177,7 +191,7 @@ var regions = [
     {
         name: '廊坊市',
         itemStyle: {
-            areaColor: {
+            color: {
                 type: 'linear',
                x: 0,
                 y:0,
@@ -195,7 +209,7 @@ var regions = [
     {
         name: '秦皇岛市',
         itemStyle: {
-            areaColor: {
+            color: {
                 type: 'linear',
                 x: 0,
                 y:0,
@@ -229,24 +243,37 @@ $.get('http://127.0.0.1:8081/hebei',function(res){
         },
         geo: {
             map: 'hebei',
-            // roam: 'scale',
+            roam: 'scale',
             zoom: 1.2,
             left: '34%',
             top: '12%',
             itemStyle: {
-                areaColor: '#0045cc',
+               // color: '#0045cc',
+                color: {
+                    type: 'linear',
+                    x: 0,
+                    y: 0,
+                    x2: 0,
+                    y2: 1,
+                    colorStops: [{
+                        offset: 0, color: 'red' // 0% 处的颜色
+                    }, {
+                        offset: 1, color: 'blue' // 100% 处的颜色
+                    }],
+                    globalCoord: false // 缺省为 false
+                },
                 borderWidth: 0,
                 shadowColor: 'rgba(0,54,255,1)',
                 shadowBlur: 50
             },
             silent: true,
-            // regions: regions
+           regions: regions
         },
         series: [{
             type: 'map',
             map: 'hebei',
             zoom: 1.2,
-            // roam: 'scale',
+            roam: 'scale',
             label: {
                 show: true,
                 color: '#ffffff'
@@ -261,10 +288,10 @@ $.get('http://127.0.0.1:8081/hebei',function(res){
                     show: false,
                 },
                 itemStyle: {
-                    areaColor: '#0145CC',
+                    color: '#0145CC',
                 }
             },
-            data: data,
+            data: data1,
         }]
     };
     mychart.setOption(option);
